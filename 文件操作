@@ -44,3 +44,15 @@ C语言对文件的处理方法：
                           fwrite()把数据项写到指定文件中
                           fscanf()从指定文件按格式输入数据
                           fprintf()按指定格式将数据写到指定文件中
+
+fopen 和 fopen_s
+        fopen用法: fp = fopen(filename,"w")。
+        fopen_s用法:，须定义另外一个变量errno_t err，然后err = fopen_s(&fp,filename,"w")。
+       返回值： fopen打开文件成功，返回文件指针（赋值给fp），打开失败则返回NULL值；
+               fopen_s打开文件成功返回0，失败返回非0。
+              
+ fscanf 和 fscanf_s
+
+      fscanf用法：fscanf(fp,"%d",&var)
+      fscanf_s用法：fscanf(fp,"%d",&var,sizeof(int))
+      区别：fscanf_s需要指定长度
