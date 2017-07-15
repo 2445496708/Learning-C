@@ -1,0 +1,63 @@
+#include、#define，预处理编译器指令
+
+变量
+
+  以两个下划线或下划线和大写字母大头的名称被保留给实现
+  以一个下划线开头的名称被保留给实现，用作全局标识符
+  
+  bit位：计算机内存的基本单元
+  byte字节：8位的内存单元
+  
+  整型
+    short至少16位
+    int至少与short一样长
+    long至少32位，且至少与int一样长
+    long long至少64位，且至少与long一样长
+    
+    16位的int取值范围为-32768~+32768
+    
+    sizeof（），返回类型或变量的长度，单位为字节
+    头文件climits定义了符号常量来表示类型的限制
+      
+      #include<iostream>
+      #include<climits>
+      int main()
+      {
+          using namespace std;
+          
+          int  n_int=INT_MAX;
+          short n_short=SHRT_MAX;
+          long n_long=LONG_MAX;
+          long long n_llong=LLONG_MAX;
+          
+          cout<<"int is "<<sizeof(int)<<" bytes."<<endl;
+          cout<<"short is "<<sizeof n_short<<" bytes."<<endl;
+          cout<<"long is "<<sizeof n_long<<" bytes."<<endl;
+          cout<<"long long is "<<sizeof n_llong<<" bytes."<<endl;
+          cout<<endl;
+          
+          cout<<"Maximum values:"<<endl;
+          cout<<"int: "<<n_int<<endl;
+          cout<<"short: "<<n_short<<endl;
+          cout<<"long: "<<n_long<<endl;
+          cout<<"long long: "<<n_llong<<endl;
+          
+          cout<<"Minimum int value = "<<INT_MIN<<endl;
+          cout<<"Bits per byte = "<<CHAR_BIT<<endl;
+          
+          return 0;
+      }
+    
+    初始化： int wren（4432）
+            int hamburgers={24}；
+            int emus{7}；
+            int rocs={}
+    cout<<dex; 
+    cout<<oct;
+    cout<<hex;
+    cout.put(ch);//输出一个字符
+    \n:换行符
+    
+  
+  
+  
